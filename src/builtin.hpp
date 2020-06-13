@@ -10,9 +10,9 @@ int help(CPP args);
 int osh_exit(CPP args);
 
 char *builtin_str[] = {
-    "cd",
-    "help",
-    "exit"
+    (char *)"cd",
+    (char *)"help",
+    (char *)"exit",
 };
 
 int (*builtin_func[])(CPP) = {

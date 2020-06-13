@@ -14,12 +14,12 @@ int launch(char **args)
 	{
 		if(execvp(args[0],args)==-1)
 		{
-			perror("lsh");
+			perror("osh");
 		}
 		exit(EXIT_FAILURE);
 	}else if(pid<0)
 	{
-		perror("lsh");
+		perror("osh");
 	}else{
 		do{
 			wpid=waitpid(pid, &status, WUNTRACED);
