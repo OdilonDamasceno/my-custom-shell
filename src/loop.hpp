@@ -33,7 +33,7 @@ void loop(void)
 
         printf("$\033[1;36m %s@%s \033[0m", getlogin(), hostbuffer);
 
-        printf("\033[1;31mat\033[0m \033[1;33m%s\033[0m\n%s> ", gcp(), &buff);
+        printf("\033[1;31mat\033[0m \033[1;33m%s\033[0m\n%s> ", gcp(), (char *)&buff);
 
         line = read_line();
         args = split_line(line);
