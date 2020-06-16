@@ -2,11 +2,14 @@
 #define _SPLIT_LINE_H
 #define TOK_BUFSIZE 64
 #define TOK_DELIM " \t\r\n\a"
-#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <iostream>
+#include "write_history.hpp"
+
 char **split_line(char *line)
 {
+    write_history(line);
     int bufsize = TOK_BUFSIZE, position = 0;
     char **tokens = (char **)malloc(bufsize * sizeof(char *));
     char *token;

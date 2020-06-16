@@ -38,7 +38,6 @@ void loop(void)
 
         line = read_line();
         args = split_line(line);
-        write_history(args);
         status = execute(args);
 
         free(line);
