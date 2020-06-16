@@ -9,6 +9,7 @@
 #include <limits.h>
 #include <fstream>
 #include <iostream>
+#include "write_history.hpp"
 
 void loop(void)
 {
@@ -37,6 +38,7 @@ void loop(void)
 
         line = read_line();
         args = split_line(line);
+        write_history(args);
         status = execute(args);
 
         free(line);
